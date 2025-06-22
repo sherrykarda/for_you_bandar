@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💌 BBG Compliment Machine 💋</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      color: #990099;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #ff69b4;
+    }
+    #compliment {
+      margin: 30px auto;
+      font-size: 1.2em;
+      max-width: 400px;
+      padding: 20px;
+      background: #ffe4f1;
+      border-radius: 20px;
+      box-shadow: 0 0 10px #ff69b4;
+    }
+    button {
+      background-color: #ffc0cb;
+      color: #8b008b;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 24px;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px #888;
+      transition: transform 0.2s;
+    }
+    button:hover {
+      transform: scale(1.05);
+      background-color: #ffb6c1;
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ Click for Magical Words ✨</h1>
+  <div id="compliment">I'm ready to make you smile 😚</div>
+  <button onclick="showCompliment()">Give me LOVE 💘</button>
+
+  <script>
+    const compliments = [
+         "Oww Mere peyare shona bacha..🎀💕✨",
+         "Oww bandraa..hann tuhhh..🐒",
+         "I love you meree shona bacha..💋💋💕✨",
+         "Kutteya tuhh sirff meraa aaaaa...!!🤗✨💕",
+         "Je kisi hor al vekheya tn dur kudi vl akhan  vi chuklia mai tn rab nu chuka dyna..🤗💕",
+         "Babayy tuhhh mere li bo khas aa..💗",
+         "Jida chini toh bina cha fiki oda hi tere bina meri zindgi suni aa..🥺🍌🍌",
+         "Babayyyyyyyyy....!!!! Maneya mai tynu tng bala krdi pr ahi meri peyar di pasha wa..😊",
+         "Oh alluaa jeya mera sath na shdii kundr..❤ I love uh jann..💋✨",
+         "Loda laila mera..🍌🍌🍌💋💋"
+    ];
+
+    let index = 0;
+
+    function showCompliment() {
+      const compDiv = document.getElementById("compliment");
+      compDiv.innerText = compliments[index];
+      index = (index + 1) % compliments.length;
+    }
+  </script>
+</body>
+</html>
